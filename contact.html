@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styleContact.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <form id="myForm" autocomplete="off">
+    
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Primer Nombre</label>
+                            <input type="text" class="form-control" id="firstName">
+                            <label class="error" id="errorFirstName"></label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Segundo Nombre</label>
+                            <input type="text" class="form-control" id="secondName">
+                            <label id="errorSecondName"></label>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Apellido</label>
+                            <input type="text" class="form-control" id="lastName">
+                            <label class="error" id="errorLastName"></label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Segundo Apellido</label>
+                            <input type="text" class="form-control" id="secondLastName">
+                            <label id="errorSecondLastName"></label>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Edad</label>
+                            <input type="text" class="form-control" id="age">
+                            <label class="error" id="errorAge"></label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select class="form-control" id="gender">
+                                <option value="e">-----</option>
+                                <option value="m">Masculino</option>
+                                <option value="f">Femenino</option>
+                            </select>
+                            <label class="error" id="errorGender"></label>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-primary" onclick="validForm()">Enviar</button>
+                    </div>
+                </div>
+    
+            </form>
+        </div>
+
+    </div>
+    
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="assets/javascriptContact.js"></script>
+</body>
+</html>

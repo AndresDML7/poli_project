@@ -1,0 +1,26 @@
+.example {
+    width: 300px;
+    height: 300px;
+}
+
+@media (min-width: 375px) {
+    .example {
+        background-color: black;
+    }
+}
+
+@media (min-width: 700px) {
+    .example {
+        background-color: blue;
+    }
+}
+
+@media (min-width: 1024px) {
+    .example {
+        background-color: coral;
+    }
+}
+
+.error {
+    color: red;
+}
