@@ -4,82 +4,167 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <link rel="stylesheet" href="/assets/styleContact.css">
+    <link rel="stylesheet" href="/assets/plugins/fontawesome-free-5.15.4-web/css/all.css">
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.1.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/styleContact.css">
+    <title>Contacto</title>
 </head>
-<body>
-
-    <div class="container">
-        <div class="row">
-            <form id="myForm" autocomplete="off">
-    
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Primer Nombre</label>
-                            <input type="text" class="form-control" id="firstName">
-                            <label class="error" id="errorFirstName"></label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Segundo Nombre</label>
-                            <input type="text" class="form-control" id="secondName">
-                            <label id="errorSecondName"></label>
-                        </div>
-                    </div>
+<body style="background-color: #9fd0e3;">
+    <div class="head">
+        <header>
+            <div class="container-header">
+                <div class="logo">
+                    <img src="/assets/images/logo_negro.png" alt="Logo">
                 </div>
-    
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Apellido</label>
-                            <input type="text" class="form-control" id="lastName">
-                            <label class="error" id="errorLastName"></label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Segundo Apellido</label>
-                            <input type="text" class="form-control" id="secondLastName">
-                            <label id="errorSecondLastName"></label>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Edad</label>
-                            <input type="text" class="form-control" id="age">
-                            <label class="error" id="errorAge"></label>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Gender</label>
-                            <select class="form-control" id="gender">
-                                <option value="e">-----</option>
-                                <option value="m">Masculino</option>
-                                <option value="f">Femenino</option>
-                            </select>
-                            <label class="error" id="errorGender"></label>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-sm-4">
-                        <button type="button" class="btn btn-primary" onclick="validForm()">Enviar</button>
-                    </div>
-                </div>
-    
-            </form>
-        </div>
-
+                <nav class="menu">
+                    <ul>
+                        <li><a href="/home.html">Inicio</a></li>
+                        <li><a href="/about.html">Nosotros</a></li>
+                        <li><a href="/services.html">Servicios</a></li>
+                        <li><a href="/contact.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     </div>
-    
+
+    <div class="title">
+        <strong>Contacto</strong>
+    </div>
+
+    <div class="container-body">
+        <h2 style="text-align: center;">Contacta con nosotros</h2>
+        <hr size="4" color="black">
+        <h5 style="text-align: center; margin-bottom: 25px;">paisaoproducciones@gmail.com</h5>
+        <form id="myForm" autocomplete="off">
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" placeholder="Nombre">
+              <small id="errorName" class="error"></small>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Email">
+              <small id="errorEmail" class="error"></small>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="message" rows="3" placeholder="Mensaje"></textarea>
+              <small id="errorMessage" class="error"></small>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary btn-lg" style="background-color: #126594; margin-bottom: 30px;">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- <div class="grid-container">
+        <div class="grid-item">
+            <h6>Ponte en contacto con nosotros!</h6>
+            <p>En Paisao Producciones estamos para servirte, no dudes en contactarnos
+                si tienes alguna pregunta o requieres uno de nuestros servicios. A
+                continuación puedes dejar tus datos y nosotros nos encargaremos de 
+                comunicarnos contigo en cuanto podamos.
+            </p>
+        </div>
+        <div class="grid-item">
+            <div class="row">
+                <form id="myForm" autocomplete="off">
+        
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Primer Nombre</label>
+                                <input type="text" class="form-control" id="firstName">
+                                <label class="error" id="errorFirstName"></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Segundo Nombre</label>
+                                <input type="text" class="form-control" id="secondName">
+                                <label id="errorSecondName"></label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Apellido</label>
+                                <input type="text" class="form-control" id="lastName">
+                                <label class="error" id="errorLastName"></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Segundo Apellido</label>
+                                <input type="text" class="form-control" id="secondLastName">
+                                <label id="errorSecondLastName"></label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Edad</label>
+                                <input type="text" class="form-control" id="age">
+                                <label class="error" id="errorAge"></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select class="form-control" id="gender">
+                                    <option value="e">-----</option>
+                                    <option value="m">Masculino</option>
+                                    <option value="f">Femenino</option>
+                                </select>
+                                <label class="error" id="errorGender"></label>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-primary" style="background-color: #126594; border-color: #126594;" onclick="validForm()">Enviar</button>
+                        </div>
+                    </div>
+        
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container-footer">
+        <div class="footer-item lista">
+            <ul>
+                <li style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">El artista eres tú</li>
+                <li><i class="fas fa-circle" style="font-size: 10px;"></i>Ven y graba tu talento</li>
+                <li><i class="fas fa-circle" style="font-size: 10px;"></i>Muestra tus aprendizajes</li>
+                <li><i class="fas fa-circle" style="font-size: 10px;"></i>Potencia tu carrera artística</li>
+            </ul>
+        </div>
+        <div class="footer-item"></div>
+        <div class="footer-item" style="margin-top: 60px;">
+            <h5><strong style="color: #9fd0e3;">Paisao Producciones</strong></h5>
+            <hr class="line" size="4">
+            <a href="https://www.youtube.com/PaisaoErnestoBorrero"><span><i class="fab fa-youtube" style="color: red;"></i></span></a>
+            <a href="https://www.instagram.com/paisaoproducciones"><span><i class="fab fa-instagram" style="color: hsl(320, 100%, 22%);"></i></span></a>
+            <a href="https://www.facebook.com/Paisao"><span><i class="fab fa-facebook" style="color: blue;"></i></span></a>
+            <a href="https://api.whatsapp.com/send?phone=573187456255&text=Hola,%20me%20interesa%20uno%20de%20tus%20servicios."><span><i class="fab fa-whatsapp" style="color: green;"></i></span></a>
+            <a href="https://twitter.com/ernestopaisao"><span><i class="fab fa-twitter" style="color: #1DA1F2;"></i></span></a>
+            <p style="font-size: 12px; margin-top: 20px;">Copyright © 2021 Paisao - Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-item"></div>
+        <div class="footer-item lista">
+            <ul>
+                <li style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Contacto</li>
+                <li><span><i class="fas fa-mobile-alt"></i></span>350-536-0186</li>
+                <li><span><i class="fas fa-mobile-alt"></i></span>300-292-4641</li>
+                <li><span><i class="fas fa-envelope"></i></span>ernewst@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
     <script src="assets/jquery.min.js"></script>
     <script src="assets/plugins/bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
     <script src="assets/javascriptContact.js"></script>

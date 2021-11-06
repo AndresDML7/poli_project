@@ -1,5 +1,8 @@
 :root {
-    --backgroudColor: rgba(108, 158, 50, 0.95);
+    --bluePrimary: #126594;
+    --blueSecondary: #9fd0e3;
+    --black: #040404;
+    --white: #f0fbfb;
 }
 
 * {
@@ -7,15 +10,22 @@
     overflow: hidden;
 }
 
+.error {
+    color: red;
+}
+
 body {
     overflow: auto;
     height: 100vh;
-    background-image: url("/assets/images/playa.jpg");
+    background-image: url("/assets/images/guitarra.jpg");
+    /*background-color: var(--bluePrimary);*/
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
     margin: auto;
 }
+
+/* Header Styles */
 
 .container {
     height: 250px;
@@ -24,28 +34,29 @@ body {
 }
 
 .title {
-    font-size: 50px;
-    color:mintcream;
+    font-size: 58px;
+    color: var(--black);
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     margin-left: 20px;
     margin-top: -194px;
+    user-select: none;
 }
 
 .container-header {
-    height: 60px;
+    height: 70px;
     width: 99.3%;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.3)
+    background-color: var(--white);
 }
 
 header {
     position: absolute;
     display: flex;
-    height: 50%;
     width: 100%;
     margin-left: -8px;
     margin-top: -8px;
+    user-select: none;
 }
 
 .logo {
@@ -73,7 +84,7 @@ header {
 
 .menu li a {
     display: block;
-    color: mintcream;
+    color: var(--black);
     padding: 7px 15px;
     text-decoration: none;
     text-align: center;
@@ -83,7 +94,7 @@ header {
 }
 
 .menu li a:hover {
-    background-color:navy;
+    background-color:var(--bluePrimary);
     color: white;
 }
 
@@ -92,6 +103,8 @@ header {
     text-align: left;
     align-self: center;
 }
+
+/* End Header Styles */
 
 .container-slideshow {
     padding-top: 30px;
@@ -129,7 +142,7 @@ header {
 }
 
 .text {
-    color: black;
+    color: var(--black);
     font-size: 20px;
     padding: 8px 12px;
     position: absolute;
@@ -186,7 +199,7 @@ header {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
-    background-color: var(--backgroudColor);
+    background-color: var(--blueSecondary);
 }
 
 .grid-item {
@@ -212,15 +225,21 @@ header {
     background-color: var(--backgroudColor);
 }
 
+/* Footer Styles */
+
 .container-footer {
+    background-color: var(--white);
     display: grid;
-    grid-template-columns: 300px 100px 300px 100px 300px;
-    height: 190px;
+    grid-template-columns: 400px 50px 350px 50px 400px;
+    height: 160px;
     padding-top: 50px;
-    width: 95%;
+    width: 100%;
     align-content: center;
     align-items: center;
     justify-content: center;
+    padding-bottom: 20px;
+    margin-top: 15px;
+    user-select: none;
 }
 
 .footer-item {
@@ -228,24 +247,42 @@ header {
     font-size: 30px;
     height: 250px;
     text-align: center;
-}
-
-.footer-item a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
+    justify-content: center;
+    color: var(--black);
 }
 
 .footer-item ul {
-    margin-top: 40px;
+    font-size: 16px;
+    margin-top: -20px;
 }
 
-.footer-item li {
-    margin-top: -10px;
+.lista {
+    text-align: left;
+}
+
+.lista ul {
+    margin-top: 60px;
+}
+
+.lista li {
+    margin-left: 40px;
+}
+
+.lista li i {
+    margin-right: 8px;
+}
+
+.footer-item li i {
+    font-size: 16px;
+}
+
+.footer-item li span {
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .footer-item a span i {
-    font-size: 40px;
+    font-size: 35px;
     margin: 10px;
     margin-top: -20px;
 }
@@ -254,32 +291,26 @@ header {
     transform: scale(1.2);
 }
 
-.phrase {
-    font-size: 18px;
-    justify-content: center;
-    text-align: center;
-    margin-top: 40px;
-    font-style: italic;
+.line {
+    margin-bottom: 35px;
+    background-color: var(--black);
+    color: var(--black);
+    border-color: var(--black);
+    width: 100%;
+    opacity: 1;
 }
 
-.line {
-    margin-top: -30px;
-    margin-bottom: 40px;
-    background-color: black;
-    border-color: black;
-    border-width: 1px;
-    width: 85%;
-}
+/* End Footer Styles */
 
 .grid-about {
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
-    background-color: lightskyblue;
+    background-color: var(--blueSecondary);
 }
 
 .grid-item-about {
-    padding: 20px;
+    padding: 10px;
     font-size: 30px;
     text-align: center;
     width: 90%;
@@ -294,6 +325,7 @@ header {
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
+    background-color: var(--bluePrimary);
 }
 
 .grid-item-mision {
@@ -312,7 +344,8 @@ header {
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
-    background-color: lightskyblue;
+    background-color: var(--blueSecondary);
+    margin-bottom: -15px;
 }
 
 .grid-item-vision {
