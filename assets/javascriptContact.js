@@ -1,57 +1,67 @@
-function validForm() {
-    var firstName = document.getElementById("firstName").value;
-    var secondName = document.getElementById("secondName").value;
-    var lastName = document.getElementById("lastName").value;
-    var secondLastName = document.getElementById("secondLastName").value;
-    var age = document.getElementById("age").value;
-    var gender = document.getElementById("gender").value;
+const validForm = () => {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
 
-    var errorFirstName = document.getElementById("errorFirstName");
-    var errorSecondName = document.getElementById("errorSecondName");
-    var errorLastName = document.getElementById("errorLastName");
-    var errorSecondLastName = document.getElementById("errorSecondLastName");
-    var errorAge = document.getElementById("errorAge");
-    var errorGender = document.getElementById("errorGender");
+    var errorName = document.getElementById("errorName");
+    var errorEmail = document.getElementById("errorEmail");
+    var errorMessage = document.getElementById("errorMessage");
 
-    var cont = 0;
+    let isValid = true;
 
-    if(firstName === "" || firstName.length > 20) {
-        errorFirstName.innerText = "Debes ingresar un nombre de máximo 20 caracteres.";
-        cont++;
+    if(name === "") {
+        errorName.innerText = "Debes ingresar un nombre.";
+        isValid = false;
     } else {
-        errorFirstName.innerText = "";
+        errorName.innerText = "";
     }
 
-    if(lastName === "" || lastName.length > 20) {
-        errorLastName.innerText = "Debes ingresar un nombre de máximo 20 caracteres.";
-        cont++;
+    if(!validateEmail(email)) {
+        errorEmail.innerText = "Debes ingresar un email válido.";
+        isValid = false;
     } else {
-        errorLastName.innerText = "";
+        errorEmail.innerText = "";
     }
 
-    if(isNaN(Number(age))) {
-        errorAge.innerText = "Debes ingresar unicamente números.";
-        cont++;
+    if(message === "" || message.length > 200) {
+        errorMessage.innerText = "Debes ingresar un mensaje de máximo 200 caracteres.";
+        isValid = false;
     } else {
-        errorAge.innerText = "";
+        errorMessage.innerText = "";
     }
 
-    if(Number(age) < 0 || Number(age) > 100) {
-        errorAge.innerText = "Debes ingresar un número válido."
-        cont++;
+    if(isValid) {
+        sendMail();
     } else {
-        errorAge.innerText = "";
-    }
-
-    if(gender === "e") {
-        errorGender.innerText = "Debes ingresar un género.";
-        cont++;
-    } else {
-        errorGender.innerText = "";
-    }
-
-    if(cont > 0) {
         return;
     }
+}
+
+const sendMail = () => {
+    let recipient="andru2015.7";
+    let at = String.fromCharCode(64);
+    let dotcom="gmail.com";
+    let mail="mailto:";
+    var subject = "Mensaje de cliente";
+    let part1 = document.getElementById("name").value;
+    let part2 = document.getElementById("email").value;
+    let part3 = document.getElementById("message").value;
+    var part4 = "Atentamente, "+part1+" - "+part2+". Mensaje enviado desde www.paisaoproducciones.com";
+    var body = part3 + ". " + part4 + ".";
+
+    window.open(mail+recipient+at+dotcom+"?subject="+subject+"&body="+body);
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+}
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function cleanErrors(value) {
+    document.getElementById(value).innerText = "";
 }
 

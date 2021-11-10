@@ -1,8 +1,9 @@
 :root {
     --bluePrimary: #126594;
     --blueSecondary: #9fd0e3;
-    --black: #040404;
-    --white: #f0fbfb;
+    --blue: #032a49;
+    --black: #000;
+    --white: #fff;
 }
 
 * {
@@ -17,11 +18,7 @@
 body {
     overflow: auto;
     height: 100vh;
-    background-image: url("/assets/images/guitarra.jpg");
-    /*background-color: var(--bluePrimary);*/
-    background-repeat: no-repeat;
-    background-attachment: inherit;
-    background-position: center;
+    background-image: url("/assets/images/background6.jpg");
     margin: auto;
 }
 
@@ -35,7 +32,7 @@ body {
 
 .title {
     font-size: 58px;
-    color: var(--black);
+    color: var(--white);
     font-weight: bold;
     text-align: center;
     margin-left: 20px;
@@ -94,7 +91,7 @@ header {
 }
 
 .menu li a:hover {
-    background-color:var(--bluePrimary);
+    background-color: #05467a;
     color: white;
 }
 
@@ -228,7 +225,8 @@ header {
 /* Footer Styles */
 
 .container-footer {
-    background-color: var(--white);
+    
+    background-color: #032a49;
     display: grid;
     grid-template-columns: 400px 50px 350px 50px 400px;
     height: 160px;
@@ -248,7 +246,7 @@ header {
     height: 250px;
     text-align: center;
     justify-content: center;
-    color: var(--black);
+    color: var(--white);
 }
 
 .footer-item ul {
@@ -293,9 +291,9 @@ header {
 
 .line {
     margin-bottom: 35px;
-    background-color: var(--black);
-    color: var(--black);
-    border-color: var(--black);
+    background-color: var(--white);
+    color: var(--white);
+    border-color: var(--white);
     width: 100%;
     opacity: 1;
 }
@@ -306,7 +304,7 @@ header {
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
-    background-color: var(--blueSecondary);
+    background-color: var(--white);
 }
 
 .grid-item-about {
@@ -321,41 +319,180 @@ header {
     width: inherit;
 }
 
-.grid-mision {
+.grid-academia {
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
-    background-color: var(--bluePrimary);
+    background-color: var(--white);
 }
 
-.grid-item-mision {
+.grid-item-academia {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    width: 90%;
+}
+
+.grid-item-academia img {
+    height: inherit;
+    width: inherit;
+}
+
+.grid-produccion {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    background-color: var(--blue);
+}
+
+.grid-item-produccion {
     padding: 20px;
     font-size: 30px;
     text-align: center;
     width: 90%;
 }
 
-.grid-item-mision img {
+.grid-item-produccion img {
     height: inherit;
     width: inherit;
 }
 
-.grid-vision {
+.grid-eventos {
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
-    background-color: var(--blueSecondary);
+    background-color: var(--white);
     margin-bottom: -15px;
 }
 
-.grid-item-vision {
+.grid-item-eventos {
     padding: 20px;
     font-size: 30px;
     text-align: center;
     width: 90%;
 }
 
-.grid-item-vision img {
+.grid-item-eventos img {
     height: inherit;
     width: inherit;
+}
+
+.banner-services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    background-image: url("/assets/images/estudio.jpg");
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center;
+    
+    margin-bottom: -15px;
+    margin-top: 15px;
+    color: var(--white);
+    flex-direction: column;
+}
+
+.banner-services-text {
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+.banner-services-button {
+    background-color: #043862;
+    border: none;
+    border-radius: 5px;
+    height: 55px;
+    width: 125px;
+    margin-top: -40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white);
+    align-self: center;
+    cursor: pointer;
+    font-family: Brandon Text,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+.banner-services-button:hover {
+    background-color: #065493;
+}
+
+.banner-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    background-image: url("/assets/images/contact.jpg");
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center;
+    
+    margin-bottom: -15px;
+    margin-top: 15px;
+    color: var(--white);
+    flex-direction: column;
+}
+
+.banner-contact-text {
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+.banner-contact-button {
+    background-color: #043862;
+    border: none;
+    border-radius: 5px;
+    height: 55px;
+    width: 150px;
+    margin-top: -40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white);
+    align-self: center;
+    cursor: pointer;
+    font-family: Brandon Text,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+.banner-contact-button:hover {
+    background-color: #065493;
+}
+
+.banner-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    background-image: url("/assets/images/banner_micro.jpg");
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center;
+    
+    margin-bottom: -15px;
+    margin-top: 15px;
+    color: var(--white);
+    flex-direction: column;
+}
+
+.banner-about-text {
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+.banner-about-button {
+    background-color: #043862;
+    border: none;
+    border-radius: 5px;
+    height: 55px;
+    width: 150px;
+    margin-top: -40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--white);
+    align-self: center;
+    cursor: pointer;
+    font-family: Brandon Text,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+
+.banner-about-button:hover {
+    background-color: #065493;
 }

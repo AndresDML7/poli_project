@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap-5.1.1-dist/css/bootstrap.min.css">
     <title>Contacto</title>
 </head>
-<body style="background-color: #9fd0e3;">
+<body style="background-color: #7da6db;">
     <div class="head">
         <header>
             <div class="container-header">
                 <div class="logo">
-                    <img src="/assets/images/logo_negro.png" alt="Logo">
+                    <img src="/assets/images/logo.jpg" alt="Logo">
                 </div>
                 <nav class="menu">
                     <ul>
@@ -28,29 +28,25 @@
         </header>
     </div>
 
-    <div class="title">
-        <strong>Contacto</strong>
-    </div>
-
     <div class="container-body">
-        <h2 style="text-align: center;">Contacta con nosotros</h2>
+        <h2 style="text-align: center; color: black;">Contacta con nosotros</h2>
         <hr size="4" color="black">
         <h5 style="text-align: center; margin-bottom: 25px;">paisaoproducciones@gmail.com</h5>
         <form id="myForm" autocomplete="off">
             <div class="form-group">
-              <input type="text" class="form-control" id="name" placeholder="Nombre">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" onchange="cleanErrors('errorName')">
               <small id="errorName" class="error"></small>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="email" placeholder="Email">
+              <input type="text" class="form-control" id="email" name="email" placeholder="Email" onchange="cleanErrors('errorEmail')">
               <small id="errorEmail" class="error"></small>
             </div>
             <div class="form-group">
-              <textarea class="form-control" id="message" rows="3" placeholder="Mensaje"></textarea>
+              <textarea class="form-control" id="message" name="message" rows="3" placeholder="Mensaje" onchange="cleanErrors('errorMessage')"></textarea>
               <small id="errorMessage" class="error"></small>
             </div>
             <div style="text-align: center;">
-                <button type="submit" class="btn btn-primary btn-lg" style="background-color: #126594; margin-bottom: 30px;">Enviar</button>
+                <input type="button" value="Enviar" class="btn btn-primary btn-lg" style="background-color: #043862; margin-bottom: 30px; border: none;" onclick="validForm()"></input>
             </div>
         </form>
     </div>
@@ -145,13 +141,13 @@
         </div>
         <div class="footer-item"></div>
         <div class="footer-item" style="margin-top: 60px;">
-            <h5><strong style="color: #9fd0e3;">Paisao Producciones</strong></h5>
+            <h5><strong style="color: white;">Paisao Producciones</strong></h5>
             <hr class="line" size="4">
-            <a href="https://www.youtube.com/PaisaoErnestoBorrero"><span><i class="fab fa-youtube" style="color: red;"></i></span></a>
-            <a href="https://www.instagram.com/paisaoproducciones"><span><i class="fab fa-instagram" style="color: hsl(320, 100%, 22%);"></i></span></a>
-            <a href="https://www.facebook.com/Paisao"><span><i class="fab fa-facebook" style="color: blue;"></i></span></a>
-            <a href="https://api.whatsapp.com/send?phone=573187456255&text=Hola,%20me%20interesa%20uno%20de%20tus%20servicios."><span><i class="fab fa-whatsapp" style="color: green;"></i></span></a>
-            <a href="https://twitter.com/ernestopaisao"><span><i class="fab fa-twitter" style="color: #1DA1F2;"></i></span></a>
+            <a href="https://www.youtube.com/PaisaoErnestoBorrero"><span><i class="fab fa-youtube" style="color: white;"></i></span></a>
+            <a href="https://www.instagram.com/paisaoproducciones"><span><i class="fab fa-instagram" style="color: white"></i></span></a>
+            <a href="https://www.facebook.com/Paisao"><span><i class="fab fa-facebook" style="color: white;"></i></span></a>
+            <a href="https://api.whatsapp.com/send?phone=573187456255&text=Hola,%20me%20interesa%20uno%20de%20tus%20servicios."><span><i class="fab fa-whatsapp" style="color: white;"></i></span></a>
+            <a href="https://twitter.com/ernestopaisao"><span><i class="fab fa-twitter" style="color: white;"></i></span></a>
             <p style="font-size: 12px; margin-top: 20px;">Copyright © 2021 Paisao - Todos los derechos reservados.</p>
         </div>
         <div class="footer-item"></div>
