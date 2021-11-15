@@ -106,7 +106,7 @@ header {
 .container-slideshow {
     padding-top: 30px;
     max-width: 1000px;
-    position: relative;
+    
     margin: auto;
     width: 40%;
 }
@@ -228,7 +228,7 @@ header {
     
     background-color: #032a49;
     display: grid;
-    grid-template-columns: 400px 50px 350px 50px 400px;
+    grid-template-columns: 400px 50px 400px 50px 400px;
     height: 160px;
     padding-top: 50px;
     width: 100%;
@@ -241,7 +241,7 @@ header {
 }
 
 .footer-item {
-    padding: 20px;
+    padding: 10px;
     font-size: 30px;
     height: 250px;
     text-align: center;
@@ -362,7 +362,6 @@ header {
     grid-template-columns: auto auto;
     padding: 10px;
     background-color: var(--white);
-    margin-bottom: -15px;
 }
 
 .grid-item-eventos {
@@ -373,6 +372,26 @@ header {
 }
 
 .grid-item-eventos img {
+    height: inherit;
+    width: inherit;
+}
+
+.grid-recreacion {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    background-color: var(--blue);
+    margin-bottom: -15px;
+}
+
+.grid-item-recreacion {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 90%;
+}
+
+.grid-item-recreacion img {
     height: inherit;
     width: inherit;
 }
@@ -495,4 +514,44 @@ header {
 
 .banner-about-button:hover {
     background-color: #065493;
+}
+
+.grid-home {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    background-color: var(--white);
+}
+
+.grid-item-home {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 90%;
+}
+
+.grid-item-home img {
+    height: inherit;
+    width: inherit;
+}
+
+.grid-map {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 20px;
+    background-color: var(--blue);
+    margin-bottom: -15px;
+}
+
+.grid-item-map {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 90%;
+}
+
+.map iframe {
+    border-radius: 5px;
+    width: 600px;
+    height: 350px;
 }

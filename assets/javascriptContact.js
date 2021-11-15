@@ -23,8 +23,8 @@ const validForm = () => {
         errorEmail.innerText = "";
     }
 
-    if(message === "" || message.length > 200) {
-        errorMessage.innerText = "Debes ingresar un mensaje de máximo 200 caracteres.";
+    if(message === "" || message.length > 400) {
+        errorMessage.innerText = "Debes ingresar un mensaje de máximo 400 caracteres.";
         isValid = false;
     } else {
         errorMessage.innerText = "";
