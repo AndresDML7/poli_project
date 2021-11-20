@@ -111,7 +111,7 @@ header {
 
 @media (min-width: 390px) {
     .menu li a {
-        font-size: large;
+        font-size: medium;
     }
 }
 

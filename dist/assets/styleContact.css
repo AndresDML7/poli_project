@@ -43,6 +43,12 @@ h5 {
     }
 }
 
+@media screen and (min-width: 400px) {
+    .container-header {
+        width: 433px;
+    }
+}
+
 @media (min-width: 1024px) {
     .container-header {
         width: 1250px;
@@ -72,7 +78,7 @@ header {
     .header {
         position: absolute;
         display: flex;
-        width: 800px;
+        width: 760px;
         margin-left: -22px;
         margin-top: -8px;
         user-select: none;
@@ -150,7 +156,7 @@ header {
 
 @media (min-width: 390px) {
     .menu li a {
-        font-size: large;
+        font-size: medium;
     }
 }
 
