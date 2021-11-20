@@ -18,7 +18,7 @@
 body {
     overflow: auto;
     height: 100vh;
-    background-image: url("/assets/images/background6.jpg");
+    background-image: url("images/background6.jpg");
     margin: auto;
 }
 
@@ -488,7 +488,7 @@ header {
 .banner-services {
     display: flex;
     height: 240px;
-    background-image: url("/assets/images/estudio.jpg");
+    background-image: url("images/estudio.jpg");
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
@@ -558,7 +558,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 240px;
-    background-image: url("/assets/images/contact.jpg");
+    background-image: url("images/contact.jpg");
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
@@ -627,7 +627,7 @@ header {
 .banner-about {
     display: flex;
     height: 240px;
-    background-image: url("/assets/images/banner_micro.jpg");
+    background-image: url("images/banner_micro.jpg");
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center;
