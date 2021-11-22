@@ -38,7 +38,7 @@ const validForm = () => {
 }
 
 const sendMail = () => {
-    let recipient="andru2015.7";
+    let recipient="paisaoproducciones";
     let at = String.fromCharCode(64);
     let dotcom="gmail.com";
     let mail="mailto:";
