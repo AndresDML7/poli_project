@@ -700,3 +700,21 @@ body {
         height: 350px;
     }
 }
+
+.grid-befun {
+    background-color: #9fd0e3;
+    text-align: center;
+}
+
+.befun-text {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.grid-befun a img {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+}
